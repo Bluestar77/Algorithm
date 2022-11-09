@@ -2,15 +2,15 @@
 
 ### Bubble Sort
 #### 버블정렬 : O(n)
-
+\n
 ### Insertion Sort
 #### 삽입정렬 : O(n)
-
+\n
 ### Selection Sort
 #### 선택정렬 : O(n)
-
-
-
+\n
+\n
+\n
 ### Heap
 #### 1개 삽입마다 힙을 만들어 버린다.
 
