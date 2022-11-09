@@ -3,8 +3,8 @@
 #include <string.h>
 #include <time.h>
 #pragma warning (disable:4996)
-// 8ÁÖÂ÷ ÇØ½ÃÅ×ÀÌºí
-// °³¹æÁÖ¼Ò¹ı ¾Ë°í¸®Áò (Ãæµ¹o -> Á¶»ç¹ı)
+// 8ì£¼ì°¨ í•´ì‹œí…Œì´ë¸”
+// ê°œë°©ì£¼ì†Œë²• ì•Œê³ ë¦¬ì¦˜ (ì¶©ëŒo -> ì¡°ì‚¬ë²•)
 
 #define M 13
 
@@ -39,7 +39,7 @@ int h(int k)
 
 int h2(int k)
 {
-	return 11 - (k % 11);  //11Àº M(13)º¸´Ù ÀÛÀº ¼Ò¼öÁß °¡Àå Å« ¼Ò¼ö
+	return 11 - (k % 11);  //11ì€ M(13)ë³´ë‹¤ ì‘ì€ ì†Œìˆ˜ì¤‘ ê°€ì¥ í° ì†Œìˆ˜
 }
 
 int getNextBucketLinear(int v, int i)
@@ -61,10 +61,10 @@ void insertItem(HashType* H, int k)
 {
 	int v = h(k);
 	int i = 0;
-	int count = 0; //¸î¹ø¸¸¿¡ ÀÚ¸®¸¦ Àâ´ÂÁö
+	int count = 0; //ëª‡ë²ˆë§Œì— ìë¦¬ë¥¼ ì¡ëŠ”ì§€
 
-	while (i < M) //M¹ø ¸ğµÎ Ã£¾Æº¸°í ¾øÀ¸¸é ÀÚ¸®°¡ ¾ø´Ù´Â °Í
-	{  //Á¶»ç¸¦ ½ÃÀÛÇß´Ù.
+	while (i < M) //Më²ˆ ëª¨ë‘ ì°¾ì•„ë³´ê³  ì—†ìœ¼ë©´ ìë¦¬ê°€ ì—†ë‹¤ëŠ” ê²ƒ
+	{  //ì¡°ì‚¬ë¥¼ ì‹œì‘í–ˆë‹¤.
 		count++;
 		//int b = getNextBucketLinear(v,i);
 		int b = getNextBucketQuadratic(v, i);
