@@ -53,6 +53,9 @@
 ### Graph (Adjacency list)
 + #### 인접리스트 구조
 ***
+### Graph (Adjacency Matrix)
++ #### 인접행렬 구조
+***
 ### Graph DFS
 + #### 깊이 우선 탐색 (Depth-First-Search)
 ***
