@@ -47,4 +47,9 @@
 + #### 2. 2차조사법 (quadratic probing) : A[(h(k) + f(i)) % M] , f(i) = i^2, i = 0,1,2...
 + #### 3. 이중해싱 (double hashing) : A[(h(k) + f(i)) % M] , f(i) = i*h'(k), i = 0,1,2... , h'(k)는 M과 서로소
 ***
-
+### Graph (Edge list)
++ #### 간선리스트 구조
+***
+### Graph (Adjacency list)
++ #### 인접리스트 구조
+***
