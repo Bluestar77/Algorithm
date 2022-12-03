@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//Prim ¾Ë°í¸®Áò (ÃÖ¼Ò½ÅÀåÆ®¸®)
+//Prim ì•Œê³ ë¦¬ì¦˜
+//
 
 #define FALSE 0
 #define TRUE 1
