@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-//Prim ¾Ë°í¸®Áò (ÃÖ¼Ò½ÅÀåÆ®¸®)
+//Kruskal ì•Œê³ ë¦¬ì¦˜
+//ìµœì†Œì‹ ì¥íŠ¸ë¦¬
 
 #define FALSE 0
 #define TRUE 1
@@ -131,7 +132,7 @@ void print(GraphType* G)
     printf("\n");
 }
 
-void incSort(GraphType* G, Edge* e[])  //°¡ÁßÄ¡·Î Á¤·Ä
+void incSort(GraphType* G, Edge* e[])  //ê°€ì¤‘ì¹˜ë¡œ ì •ë ¬
 {
     int i, min;
     Edge* p = G->eHead;
@@ -184,8 +185,8 @@ void kruskal(GraphType* G, Edge* e[], int v[])
 
     while (eCnt < G->vCount - 1)
     {
-        p = e[i];  //°¡ÁßÄ¡ Á¦ÀÏ ÀÛ¾Ò´ø °£¼±
-        vNum1 = rFind(v, p->v1 - 97); //·çÆ®¸¦ ªO¾ÆÁØ´Ù
+        p = e[i];  //ê°€ì¤‘ì¹˜ ì œì¼ ì‘ì•˜ë˜ ê°„ì„ 
+        vNum1 = rFind(v, p->v1 - 97); //ë£¨íŠ¸ë¥¼ Oì•„ì¤€ë‹¤
         vNum2 = rFind(v, p->v2 - 97);
 
         if (vNum1 != vNum2)
@@ -216,10 +217,10 @@ int main()
     print(&G);
 
     /Edge* e[20];
-    incSort(&G, e);  //°¡ÁßÄ¡ Å©±â ¿À¸§Â÷¼øÀ¸·Î EdgeÁ¤·Ä
+    incSort(&G, e);  //ê°€ì¤‘ì¹˜ í¬ê¸° ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ Edgeì •ë ¬
 
     int v[10] = {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1};
-    //v[] Á¤Á¡ÀÇ ·çÆ® ( °°Àº°Ô ÀÖÀ¸¸é ½ÎÀÌÅ¬ÀÌ ÀÖ´Ù°í ÆÇ´Ü)
+    //v[] ì •ì ì˜ ë£¨íŠ¸ ( ê°™ì€ê²Œ ìˆìœ¼ë©´ ì‹¸ì´í´ì´ ìˆë‹¤ê³  íŒë‹¨)
     kruskal(&G, e, v);
    
 
